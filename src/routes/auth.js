@@ -122,7 +122,6 @@ auth_router.get("/api/auth/user", (request, response) => {
       .status(401)
       .json({ success: false, message: "Unauthorised" });
   }
-  console.log(request.user);
   return response.status(200).json({
     success: true,
     message: "success retriving the user",
